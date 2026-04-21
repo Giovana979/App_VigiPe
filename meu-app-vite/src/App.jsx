@@ -1,20 +1,20 @@
-import { BotaoLogin } from "./BotaoLogin";
-import { InputCustom } from "./InputCustom";
-import {Logo} from "./Logo";
-import { InputPassWord } from "./InputPassWord";
+import { useState } from "react";
+import { Login } from "./Login";
+import { Cadastro } from "./Cadastro";
+import "./App.css";
 
 export default function App() {
-  const handleLogin = () => {
-    alert("Tentando fazer login...");
-  };
-  return (
-    <div className="container">
-      <Logo />
-      <h1 className="titulo">App VigiPeçonha</h1>
-      <InputCustom label="Nome do Usuário:" />
-      <InputPassWord label="Senha:" />
-      <BotaoLogin clicado={handleLogin} />
-      <a href="#">Não tem Cadastro?</a>
-    </div>
-  );
+    // Começa sempre na tela de login
+    const [telaAtual, setTelaAtual] = useState("login");
+
+    return (
+        <main className="container">
+            {/* Operador Ternário: Se for login, mostra Login. Senão, mostra Cadastro */}
+            {telaAtual === "login" ? (
+                <Login aoClicarCadastrar={() => setTelaAtual("cadastro")} />
+            ) : (
+                <Cadastro aoClicarVoltar={() => setTelaAtual("login")} />
+            )}
+        </main>
+    );
 }
