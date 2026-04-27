@@ -2,6 +2,7 @@ import { Logo } from "./Logo";
 import { InputCustom } from "./InputCustom";
 import { InputPassWord } from "./InputPassWord";
 import { BotaoLogin } from "./BotaoLogin";
+import "./Login.css";
 
 export function Login({ aoClicarCadastrar }) {
     return (

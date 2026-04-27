@@ -1,13 +1,13 @@
 import { InputCustom } from "./InputCustom";
 import { InputPassWord } from "./InputPassWord";
+import "./Cadastro.css";
+
 
 export function Cadastro({ aoClicarVoltar }) {
     return (
         <>
-            {/* Título com duas linhas como no seu desenho */}
-            <h2 style={{ textAlign: 'center', color: '#000080', fontFamily: 'Montserrat, sans-serif' }}>
-                Bem-Vindo ao<br/>VigiPeçonha!
-            </h2>
+            
+            <h2>Bem-Vindo ao<br/>VigiPeçonha!</h2>
 
             {/* Reutilizando seus componentes brilhantemente! */}
             <InputCustom label="Nome:" />
